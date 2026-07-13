@@ -16,9 +16,9 @@ import './App.css'
 function App() {
   useEffect(() => {
     const typed = new Typed('.typed-text', {
-      strings: ['Junior Programmer', 'Web Developer', 'Designer', 'Beginner Game Developer'],
-      typeSpeed: 100,
-      backSpeed: 100,
+      strings: ['Junior Programmer', 'Web Developer', 'Designer', 'Beginner Game Developer', 'Humble person :)'],
+      typeSpeed: 75,
+      backSpeed: 35,
       loop: true,
     })
     return () => {

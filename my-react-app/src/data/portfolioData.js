@@ -20,39 +20,39 @@ Highlight your passion and what drives you.`,
   skills: {
     frontend: [
       { name: "HTML5/CSS3", percentage: 80, icon: "" },
-      { name: "JavaScript (ES6+)", percentage: 66, icon: "" },
-      { name: "React", percentage: 63, icon: "" },
-      { name: "Svelte", percentage: 10, icon: "" },
-      { name: "Bootstrap", percentage: 71, icon: "" },
-      { name: "Tailwind", percentage: 60, icon: "" }
+      { name: "JavaScript (ES6+)", percentage: 68, icon: "" },
+      { name: "React", percentage: 65, icon: "" },
+      { name: "Svelte", percentage: 20, icon: "" },
+      { name: "Bootstrap", percentage: 75, icon: "" },
+      { name: "Tailwind", percentage: 62, icon: "" }
     ],
     backend: [
       { name: "Node JS", percentage: 58, icon: "" },
       { name: "PHP", percentage: 60, icon: "" },
-      { name: "Express JS", percentage: 46, icon: ""},
-      { name: "Python", percentage: 34, icon: "" },
+      { name: "Express JS", percentage: 45, icon: ""},
+      { name: "Python", percentage: 40, icon: "" },
       { name: "Laravel", percentage: 65, icon: "" },
-      { name: "REST APIs", percentage: 56, icon: "" }
+      { name: "REST APIs", percentage: 55, icon: "" }
     ],
     database: [  
-      { name: "MySQL", percentage: 71, icon: "" },
+      { name: "MySQL", percentage: 72, icon: "" },
       { name: "Firebase", percentage: 58, icon: "" },
-      { name: "MongoDB", percentage: 41, icon: "" },
+      { name: "MongoDB", percentage: 42, icon: "" },
       { name: "Prisma ORM", percentage: 40, icon: "" },
-      { name: "SQLite", percentage: 57, icon: "" }
+      { name: "SQLite", percentage: 55, icon: "" }
     ],
     gamedev: [
       { name: "Roblox Studio", percentage: 62, icon: "" },
       { name: "C++", percentage: 25, icon: "" },
-      { name: "Lua", percentage: 56, icon: "" }
+      { name: "Lua", percentage: 55, icon: "" }
     ],
     design: [
       { name: "Figma/UI-UX Design", percentage: 60, icon: "" },
       { name: "Blender", percentage: 52, icon: "" },
-      { name: "Photoshop", percentage: 46, icon: "" },
+      { name: "Photoshop", percentage: 45, icon: "" },
       { name: "MS PowerPoint", percentage: 85, icon: "" },
       { name: "Canva", percentage: 92, icon: "" },
-      { name: "Prototyping", percentage: 56, icon: "" },
+      { name: "Prototyping", percentage: 60, icon: "" },
       { name: "Sketching", percentage: 60, icon: "" }
     ],
     tools: [
@@ -61,7 +61,7 @@ Highlight your passion and what drives you.`,
       { name: "Postman", percentage: 60, icon: "" },
       { name: "Terminal", percentage: 53, icon: "" },
       { name: "WordPress", percentage: 60, icon: "" },
-      { name: "Replit", percentage: 67, icon: "" },
+      { name: "Replit", percentage: 68, icon: "" },
       { name: "NPM", percentage: 52, icon: "" },
       { name: "MySQL Workbench", percentage: 58, icon: "" }
     ],
