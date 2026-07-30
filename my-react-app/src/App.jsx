@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react'
 import Typed from 'typed.js'
 import { portfolioData } from './data/portfolioData'
 import useMusicPlayer from './hooks/useMusicPlayer'
+import useTheme from './hooks/useTheme'
 import Navbar from './components/Navbar'
 import Hero from './components/Hero'
 import About from './components/About'
@@ -34,6 +35,7 @@ function App() {
   const [showMusicPlayerModal, setShowMusicPlayerModal] = useState(false)
 
   const musicPlayer = useMusicPlayer()
+  const { theme, toggleTheme } = useTheme()
 
   useEffect(() => {
     const handleScroll = () => {
@@ -56,7 +58,12 @@ function App() {
 
   return (
     <div className="portfolio">
-      <Navbar isScrolled={isScrolled} scrollToSection={scrollToSection} />
+      <Navbar
+        isScrolled={isScrolled}
+        scrollToSection={scrollToSection}
+        theme={theme}
+        toggleTheme={toggleTheme}
+      />
 
       <Hero
         firstName={firstName}
@@ -85,6 +92,7 @@ function App() {
 
       <SpotifyModal show={showSpotifyModal} setShow={setShowSpotifyModal} />
 
+      
       <MusicPlayerModal
         show={showMusicPlayerModal}
         setShow={setShowMusicPlayerModal}

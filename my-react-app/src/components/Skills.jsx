@@ -119,16 +119,16 @@ function Skills({
                             </Pie>
                             <Tooltip
                               contentStyle={{
-                                backgroundColor: '#1e293b',
-                                border: '1px solid #6366f1',
+                                backgroundColor: 'var(--bg-secondary)',
+                                border: '1px solid var(--border-subtle)',
                                 borderRadius: '8px',
-                                color: '#fff',
+                                color: 'var(--text-primary)',
                               }}
                               formatter={(value) => [`${value}%`, 'Proficiency']}
                             />
                             <Legend
-                              wrapperStyle={{ color: '#fff' }}
-                              formatter={(value) => <span style={{ color: '#fff' }}>{value}</span>}
+                              wrapperStyle={{ color: 'var(--text-primary)' }}
+                              formatter={(value) => <span style={{ color: 'var(--text-primary)' }}>{value}</span>}
                             />
                           </PieChart>
                         </ResponsiveContainer>

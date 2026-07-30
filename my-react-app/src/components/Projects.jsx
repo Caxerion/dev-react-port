@@ -3,7 +3,7 @@ import { useEffect, useRef } from 'react'
 function Projects({ projects }) {
   const gridRef = useRef(null)
 
-  const extendedProjects = [...projects, projects[projects.length - 1]]
+  const extendedProjects = [...projects]
   const allProjects = [...extendedProjects, ...extendedProjects]
   const loopedProjects = [...allProjects, ...allProjects]
 

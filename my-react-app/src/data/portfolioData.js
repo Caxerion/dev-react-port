@@ -19,20 +19,20 @@ Highlight your passion and what drives you.`,
   // Skills - Add or remove skills as needed
   skills: {
     frontend: [
-      { name: "HTML5/CSS3", percentage: 80, icon: "" },
+      { name: "HTML5/CSS3", percentage: 82, icon: "" },
       { name: "JavaScript (ES6+)", percentage: 68, icon: "" },
-      { name: "React", percentage: 65, icon: "" },
+      { name: "React/Next", percentage: 70, icon: "" },
       { name: "Svelte", percentage: 20, icon: "" },
       { name: "Bootstrap", percentage: 75, icon: "" },
       { name: "Tailwind", percentage: 62, icon: "" }
     ],
     backend: [
       { name: "Node JS", percentage: 58, icon: "" },
-      { name: "PHP", percentage: 60, icon: "" },
-      { name: "Express JS", percentage: 45, icon: ""},
-      { name: "Python", percentage: 40, icon: "" },
-      { name: "Laravel", percentage: 65, icon: "" },
-      { name: "REST APIs", percentage: 55, icon: "" }
+      { name: "PHP", percentage: 65, icon: "" },
+      { name: "Express JS", percentage: 60, icon: ""},
+      { name: "Python", percentage: 50, icon: "" },
+      { name: "Laravel", percentage: 62, icon: "" },
+      { name: "REST APIs", percentage: 58, icon: "" }
     ],
     database: [  
       { name: "MySQL", percentage: 72, icon: "" },
@@ -59,15 +59,15 @@ Highlight your passion and what drives you.`,
       { name: "GitHub", percentage: 75, icon: "" },
       { name: "VS Code", percentage: 75, icon: "" },
       { name: "Postman", percentage: 60, icon: "" },
-      { name: "Terminal", percentage: 53, icon: "" },
+      { name: "Terminal", percentage: 52, icon: "" },
       { name: "WordPress", percentage: 60, icon: "" },
       { name: "Replit", percentage: 68, icon: "" },
-      { name: "NPM", percentage: 52, icon: "" },
-      { name: "MySQL Workbench", percentage: 58, icon: "" }
+      { name: "cPanel", percentage: 48, icon: "" },
+      { name: "MySQL Workbench", percentage: 62, icon: "" }
     ],
     other: [
       { name: "MS Word", percentage: 75, icon: "" },
-      { name: "MS Excel", percentage: 70, icon: "" },
+      { name: "MS Excel", percentage: 62, icon: "" },
       { name: "Mentoring", percentage: 45, icon: "" },
       { name: "Public Speaking", percentage: 60, icon: "" }
     ]
@@ -87,7 +87,7 @@ Highlight your passion and what drives you.`,
       id: 2,
       title: "PTRE Stock Management",
       description: "Smart inventory management and pick up tracking app, storing and picking up functionallity.",
-      tags: ["Laravel", "Bootstrap/Materialize"],
+      tags: ["Laravel", "Bootstrap", "MySQL"],
       link: "#",
       image: "/src/assets/ptre2.jpg"
     },
@@ -95,7 +95,7 @@ Highlight your passion and what drives you.`,
       id: 3,
       title: "Dapur Cuan!",
       description: "Coming Soon!",
-      tags: ["React", "Tailwind"],
+      tags: ["React.js", "Tailwind"],
       link: "#",
       image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=500&h=300&fit=crop"
     },
@@ -109,9 +109,9 @@ Highlight your passion and what drives you.`,
     },
     {
       id: 5,
-      title: "Task Management App (TaskyTask)",
-      description: "A productivity application for managing tasks, deadlines, and team collaboration.",
-      tags: ["React", "CSS3","Firebase"],
+      title: "Supervisor Housekeeping",
+      description: "Grand Hotel Nusantara supervisor housekeeping app, rooms tracking & monitoring.",
+      tags: ["React.js", "Express.js", "MySQL"],
       link: "https://tasky-task-b22b1.web.app",
       image: "https://images.unsplash.com/photo-1611224923853-80b023f02d71?w=500&h=300&fit=crop"
     },
@@ -125,11 +125,11 @@ Highlight your passion and what drives you.`,
     },
     {
       id: 7,
-      title: "Let's Have Your Journey.",
-      description: "A travel blog showcasing amazing destinations and experiences.",
-      tags: ["HTML5", "CSS3"],
-      link: "#",
-      image: "https://images.unsplash.com/photo-1503220317375-78c26908260c?w=500&h=300&fit=crop"
+      title: "clienty downloader",
+      description: "A comprehensive media downloader CLI-DL based no log in required, paste-link and go.",
+      tags: ["React.js/Express.js", "CLI", "Python 3"],
+      link: "https://github.com/Caxerion/clienty-source1.git",
+      image: "./src/assets/Screenshot 2026-07-19 073007.png"
     }
   ],
   

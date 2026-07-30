@@ -18,7 +18,7 @@ function MusicPlayerModal({
         aria-label="Open Music Player"
       >
         <i className="fas fa-music"></i>
-        <span>Lofi Series</span>
+        <span>Lofi Lounge</span>
       </button>
 
       <audio ref={audioRef} id="persistent-audio" className="persistent-audio">
