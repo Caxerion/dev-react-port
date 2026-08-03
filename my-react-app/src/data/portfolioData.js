@@ -111,7 +111,7 @@ Highlight your passion and what drives you.`,
       id: 5,
       title: "Supervisor Housekeeping",
       description: "Grand Hotel Nusantara supervisor housekeeping app, rooms tracking & monitoring.",
-      tags: ["React.js", "Express.js", "MySQL"],
+      tags: ["React.js/Tailwind", "Express.js", "MySQL"],
       link: "https://tasky-task-b22b1.web.app",
       image: "https://images.unsplash.com/photo-1611224923853-80b023f02d71?w=500&h=300&fit=crop"
     },

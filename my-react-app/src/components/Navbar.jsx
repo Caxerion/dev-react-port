@@ -1,6 +1,4 @@
-import ThemeToggle from './ThemeToggle'
-
-function Navbar({ isScrolled, scrollToSection, theme, toggleTheme }) {
+function Navbar({ isScrolled, scrollToSection }) {
   return (
     <nav className={`navbar ${isScrolled ? 'scrolled' : ''}`}>
       <div className="nav-container">
@@ -14,7 +12,6 @@ function Navbar({ isScrolled, scrollToSection, theme, toggleTheme }) {
             <li><a href="#projects" onClick={() => scrollToSection('projects')}>Projects</a></li>
             <li><a href="#contact" onClick={() => scrollToSection('contact')}>Contact</a></li>
           </ul>
-          <ThemeToggle theme={theme} toggleTheme={toggleTheme} />
         </div>
       </div>
     </nav>

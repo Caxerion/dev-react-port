@@ -1,6 +1,13 @@
 @keyframes float {
-  0%, 100% { transform: translateY(0px); }
-  50% { transform: translateY(-20px); }
+
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(-20px);
+  }
 }
 
 @keyframes fadeIn {
@@ -8,6 +15,7 @@
     opacity: 0;
     transform: translateY(-10px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
@@ -15,41 +23,41 @@
 }
 
 :root {
-   --primary-color: #6366f1;
-   --secondary-color: #8b5cf6;
-   --accent-color: #a78bfa;
-   --text-primary: #ffffff;
-   --text-secondary: #94a3b8;
-   --text-muted: #64748b;
-   --bg-primary: #0f172a;
-   --bg-secondary: #1e293b;
-   --bg-card: #334155;
-   --gradient-primary: linear-gradient(135deg, #6309ca 0%, #6342b3 50%, #ec4899 100%);
-   --gradient-dark: linear-gradient(180deg, #0f172a 0%, #231c38 100%);
-   --gradient-dark2: linear-gradient(180deg, #1b162b 0%, #0f172a 100%);
-   --card-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.3);
-   --border-subtle: rgba(255, 255, 255, 0.1);
-   --transition: all 0.3s ease;
-   --navbar-scrolled-bg: rgba(15, 23, 42, 0.95);
-   --navbar-scrolled-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
+  --primary-color: #6366f1;
+  --secondary-color: #8b5cf6;
+  --accent-color: #a78bfa;
+  --text-primary: #ffffff;
+  --text-secondary: #94a3b8;
+  --text-muted: #64748b;
+  --bg-primary: #0f172a;
+  --bg-secondary: #1e293b;
+  --bg-card: #334155;
+  --gradient-primary: linear-gradient(135deg, #6309ca 0%, #6342b3 50%, #ec4899 100%);
+  --gradient-dark: linear-gradient(180deg, #0f172a 0%, #231c38 100%);
+  --gradient-dark2: linear-gradient(180deg, #1b162b 0%, #0f172a 100%);
+  --card-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.3);
+  --border-subtle: rgba(255, 255, 255, 0.1);
+  --transition: all 0.3s ease;
+  --navbar-scrolled-bg: rgba(15, 23, 42, 0.95);
+  --navbar-scrolled-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
 }
 
 [data-theme='light'] {
-   --primary-color: #6366f1;
-   --secondary-color: #8b5cf6;
-   --accent-color: #7c3aed;
-   --text-primary: #0f172a;
-   --text-secondary: #475569;
-   --text-muted: #64748b;
-   --bg-primary: #f8fafc;
-   --bg-secondary: #ffffff;
-   --bg-card: #ffffff;
-   --gradient-dark: linear-gradient(180deg, #f8fafc 0%, #e9e4f8 100%);
-   --gradient-dark2: linear-gradient(180deg, #ece9f9 0%, #f8fafc 100%);
-   --card-shadow: 0 4px 6px -1px rgba(15, 23, 42, 0.08);
-   --border-subtle: rgba(15, 23, 42, 0.1);
-   --navbar-scrolled-bg: rgba(255, 255, 255, 0.95);
-   --navbar-scrolled-shadow: 0 4px 30px rgba(15, 23, 42, 0.08);
+  --primary-color: #6366f1;
+  --secondary-color: #8b5cf6;
+  --accent-color: #7c3aed;
+  --text-primary: #0f172a;
+  --text-secondary: #475569;
+  --text-muted: #64748b;
+  --bg-primary: #f8fafc;
+  --bg-secondary: #ffffff;
+  --bg-card: #ffffff;
+  --gradient-dark: linear-gradient(180deg, #f8fafc 0%, #e9e4f8 100%);
+  --gradient-dark2: linear-gradient(180deg, #ece9f9 0%, #f8fafc 100%);
+  --card-shadow: 0 4px 6px -1px rgba(15, 23, 42, 0.08);
+  --border-subtle: rgba(15, 23, 42, 0.1);
+  --navbar-scrolled-bg: rgba(255, 255, 255, 0.95);
+  --navbar-scrolled-shadow: 0 4px 30px rgba(15, 23, 42, 0.08);
 }
 
 * {
@@ -152,25 +160,95 @@ body {
   gap: 1.5rem;
 }
 
-.theme-toggle-btn {
+/* Theme Switch — sun/moon sliding toggle */
+.theme-switch {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  display: inline-flex;
+}
+
+.theme-switch-track {
+  position: relative;
+  width: 64px;
+  height: 32px;
+  border-radius: 50px;
+  padding: 3px;
+  display: flex;
+  align-items: center;
+  background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+  border: 1px solid var(--border-subtle);
+  transition: background 0.4s ease;
+  overflow: hidden;
+}
+
+.theme-switch.light .theme-switch-track {
+  background: linear-gradient(135deg, #f2f3f3 0%, #eeecee 100%);
+}
+
+.theme-switch-stars {
+  position: absolute;
+  inset: 0;
+  opacity: 1;
+  transition: opacity 0.3s ease;
+}
+
+.theme-switch.light .theme-switch-stars {
+  opacity: 0;
+}
+
+.star {
+  position: absolute;
+  background: white;
+  border-radius: 50%;
+}
+
+.star-1 {
+  width: 3px;
+  height: 3px;
+  top: 7px;
+  left: 34px;
+}
+
+.star-2 {
+  width: 2px;
+  height: 2px;
+  top: 18px;
+  left: 42px;
+}
+
+.star-3 {
+  width: 2px;
+  height: 2px;
+  top: 10px;
+  left: 48px;
+}
+
+.theme-switch-thumb {
+  position: relative;
+  z-index: 1;
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #3206b8 0%, #d78f12 100%);
+  color: #fff;
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 38px;
-  height: 38px;
-  border-radius: 50%;
-  border: 1px solid var(--border-subtle);
-  background: var(--bg-card);
-  color: var(--text-primary);
-  font-size: 0.95rem;
-  cursor: pointer;
-  transition: var(--transition);
+  transform: translateX(0);
+  transition: transform 0.35s cubic-bezier(0.65, 0, 0.35, 1), background 0.35s ease;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
 }
 
-.theme-toggle-btn:hover {
-  border-color: var(--primary-color);
-  color: var(--primary-color);
-  transform: rotate(15deg);
+.theme-switch.light .theme-switch-thumb {
+  transform: translateX(32px);
+  background: linear-gradient(135deg, #fde047 0%, #facc15 100%);
+  color: #92400e;
+}
+
+.theme-switch:hover .theme-switch-thumb {
+  filter: brightness(1.1);
 }
 
 /* Hero Section - New Dark Style */
@@ -355,6 +433,7 @@ body {
     width: 36px;
     height: 36px;
   }
+
   .socials .icon i {
     font-size: 16px;
   }
@@ -843,11 +922,11 @@ body {
     flex-direction: column;
     align-items: stretch;
   }
-  
+
   .view-mode-btn {
     justify-content: center;
   }
-  
+
   .chart-legend-grid {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -900,12 +979,13 @@ body {
   0% {
     transform: translateX(0);
   }
+
   100% {
     transform: translateX(var(--scroll-width));
   }
 }
 
-.projects-grid:hover {  
+.projects-grid:hover {
   animation-play-state: paused;
 }
 
@@ -1210,12 +1290,12 @@ body {
   .contact-wrapper {
     grid-template-columns: 1fr;
   }
-  
+
   .contact-container {
     grid-template-columns: 1fr;
     margin-top: -40px;
   }
-  
+
   .contact-info {
     margin-top: -40px;
   }
@@ -1477,6 +1557,7 @@ body {
     opacity: 0;
     transform: translateY(30px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
@@ -1484,10 +1565,10 @@ body {
 }
 
 /* Music Player Button (Bottom Right) */
+/* Music Player Button (Bottom Right) */
 .music-player-btn {
-  position: fixed;
-  bottom: 30px;
-  right: 30px;
+  position: static;
+  /* diubah dari fixed, posisinya sekarang diatur wrapper */
   z-index: 999;
   display: flex;
   align-items: center;
@@ -1522,8 +1603,26 @@ body {
   font-size: 22px;
 }
 
+/* Wrapper: stacks ThemeToggle above the Lofi Lounge button, right-aligned */
+.floating-controls {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  z-index: 999;
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: flex-end;
+  gap: 12px;
+}
+
+.floating-controls .theme-toggle-btn {
+  width: 44px;
+  height: 44px;
+}
+
 /* Collapse Spotify + Lofi buttons into icon-only circles on mobile */
 @media (max-width: 480px) {
+
   .spotify-btn,
   .music-player-btn {
     width: 50px;
@@ -1541,6 +1640,12 @@ body {
   .spotify-btn i,
   .music-player-btn i {
     font-size: 20px;
+  }
+
+  .floating-controls {
+    bottom: 30px;
+    right: 30px;
+    gap: 10px;
   }
 }
 

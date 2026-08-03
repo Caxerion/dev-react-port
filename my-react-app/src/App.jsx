@@ -12,6 +12,7 @@ import Contact from './components/Contact'
 import Footer from './components/Footer'
 import SpotifyModal from './components/SpotifyModal'
 import MusicPlayerModal from './components/MusicPlayerModal'
+import ThemeToggle from './components/ThemeToggle'
 import './App.css'
 
 function App() {
@@ -61,8 +62,6 @@ function App() {
       <Navbar
         isScrolled={isScrolled}
         scrollToSection={scrollToSection}
-        theme={theme}
-        toggleTheme={toggleTheme}
       />
 
       <Hero
@@ -92,12 +91,14 @@ function App() {
 
       <SpotifyModal show={showSpotifyModal} setShow={setShowSpotifyModal} />
 
-      
-      <MusicPlayerModal
-        show={showMusicPlayerModal}
-        setShow={setShowMusicPlayerModal}
-        {...musicPlayer}
-      />
+      <div className="floating-controls">
+        <MusicPlayerModal
+          show={showMusicPlayerModal}
+          setShow={setShowMusicPlayerModal}
+          {...musicPlayer}
+        />
+        <ThemeToggle theme={theme} toggleTheme={toggleTheme} />
+      </div>
     </div>
   )
 }

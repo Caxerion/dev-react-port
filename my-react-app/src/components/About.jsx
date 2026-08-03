@@ -25,8 +25,8 @@ function About() {
               <span className="stat-label">Years of Experience</span>
             </div>
             <div className="stat-item">
-              <span className="stat-number">4+</span>
-              <span className="stat-label">Projects Completed</span>
+              <span className="stat-number">3+</span>
+              <span className="stat-label">Client Projects Completed</span>
             </div>
             <div className="stat-item">
               <span className="stat-number"><i className="fa-solid fa-hammer"></i></span>
