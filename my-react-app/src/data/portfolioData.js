@@ -1,6 +1,11 @@
 // Portfolio Data - Edit this file to customize your portfolio
 // ===============================================================
 
+import portfolioImg from '../assets/portfolio.png'
+import ptreImg from '../assets/ptre2.jpg'
+import furnitureImg from '../assets/furniture_temp.jpg'
+import clientyImg from '../assets/Screenshot 2026-07-19 073007.png'
+
 export const portfolioData = {
   // Personal Information
   name: "Kenneth Geveny Ayhuwan",
@@ -81,7 +86,7 @@ Highlight your passion and what drives you.`,
       description: "My current portfolio website is a showcase of my skills built to leave a lasting impression",
       tags: ["React", "CSS3"],
       link: "#",
-      image: "/src/assets/portfolio.png"
+      image: portfolioImg
     },
     {
       id: 2,
@@ -89,7 +94,7 @@ Highlight your passion and what drives you.`,
       description: "Smart inventory management and pick up tracking app, storing and picking up functionallity.",
       tags: ["Laravel", "Bootstrap", "MySQL"],
       link: "#",
-      image: "/src/assets/ptre2.jpg"
+      image: ptreImg
     },
     {
       id: 3,
@@ -105,7 +110,7 @@ Highlight your passion and what drives you.`,
       description: "A website that provides home furnitures for a fancy and elegant look.",
       tags: ["React", "Node.js", "MongoDB"],
       link: "#",
-      image: "./src/assets/furniture_temp.jpg"
+      image: furnitureImg
     },
     {
       id: 5,
@@ -129,7 +134,7 @@ Highlight your passion and what drives you.`,
       description: "A comprehensive media downloader CLI-DL based no log in required, paste-link and go.",
       tags: ["React.js/Express.js", "CLI", "Python 3"],
       link: "https://github.com/Caxerion/clienty-source1.git",
-      image: "./src/assets/Screenshot 2026-07-19 073007.png"
+      image: clientyImg
     }
   ],
   

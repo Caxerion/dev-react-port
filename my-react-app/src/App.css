@@ -1286,6 +1286,30 @@ body {
 }
 
 /* Responsive */
+@media (max-width: 968px) {
+  .container-contact {
+    padding: 0 1.25rem;
+  }
+
+  .container-contact .section-title {
+    margin-left: 0;
+  }
+
+  .container-contact .section-subtitle {
+    margin-left: 0;
+  }
+
+  .contact-wrapper {
+    gap: 2rem;
+  }
+
+  .contact-form {
+    margin-top: 0;
+    margin-left: 0;
+    transform: none;
+  }
+}
+
 @media (max-width: 768px) {
   .contact-wrapper {
     grid-template-columns: 1fr;
@@ -1293,17 +1317,52 @@ body {
 
   .contact-container {
     grid-template-columns: 1fr;
-    margin-top: -40px;
+    margin-top: 0;
+  }
+
+  .contact-form {
+    margin-top: 0;
+    margin-left: 0;
+    transform: none;
+    padding: 1.25rem 0;
   }
 
   .contact-info {
-    margin-top: -40px;
+    margin-top: 0;
   }
 
   /* Fix: center the footer/contact social icon row on mobile too,
      for the same reason as .socials above. */
   .social-links {
     justify-content: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .contact-form {
+    padding: 1rem 0;
+  }
+
+  .contact-info .info-item {
+    padding: 1rem;
+    gap: 1rem;
+  }
+
+  .contact-info .info-item .icon {
+    width: 44px;
+    height: 44px;
+    flex-shrink: 0;
+  }
+
+  .contact-info .info-item p,
+  .contact-info .info-item a {
+    font-size: 0.9rem;
+    word-break: break-all;
+  }
+
+  .social-links {
+    justify-content: center;
+    flex-wrap: wrap;
   }
 }
 
@@ -1418,11 +1477,6 @@ body {
 
   .hero-title {
     font-size: 1.25rem;
-  }
-
-  .contact-info {
-    grid-template-columns: 1fr;
-    margin-top: -100px;
   }
 }
 
