@@ -5,6 +5,7 @@ import portfolioImg from '../assets/portfolio.png'
 import ptreImg from '../assets/ptre2.jpg'
 import furnitureImg from '../assets/furniture_temp.jpg'
 import clientyImg from '../assets/Screenshot 2026-07-19 073007.png'
+import sistemhotelImg from '../assets/sistemhotel.png'
 
 export const portfolioData = {
   // Personal Information
@@ -107,7 +108,7 @@ Highlight your passion and what drives you.`,
     {
       id: 4,
       title: "Erfune Furniture Website",
-      description: "A website that provides home furnitures for a fancy and elegant look.",
+      description: "A website that provides home furnitures for a fancy and elegant look. (Coming soon)",
       tags: ["React", "Node.js", "MongoDB"],
       link: "#",
       image: furnitureImg
@@ -118,7 +119,7 @@ Highlight your passion and what drives you.`,
       description: "Grand Hotel Nusantara supervisor housekeeping app, rooms tracking & monitoring.",
       tags: ["React.js/Tailwind", "Express.js", "MySQL"],
       link: "https://tasky-task-b22b1.web.app",
-      image: "https://images.unsplash.com/photo-1611224923853-80b023f02d71?w=500&h=300&fit=crop"
+      image: sistemhotelImg
     },
     {
       id: 6,
