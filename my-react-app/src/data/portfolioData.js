@@ -26,11 +26,11 @@ Highlight your passion and what drives you.`,
   skills: {
     frontend: [
       { name: "HTML5/CSS3", percentage: 82, icon: "" },
-      { name: "JavaScript (ES6+)", percentage: 68, icon: "" },
+      { name: "JavaScript (ES6+)", percentage: 70, icon: "" },
       { name: "React/Next", percentage: 70, icon: "" },
       { name: "Svelte/Sveltekit", percentage: 20, icon: "" },
       { name: "Bootstrap", percentage: 75, icon: "" },
-      { name: "Tailwind", percentage: 62, icon: "" }
+      { name: "Tailwind", percentage: 65, icon: "" }
     ],
     backend: [
       { name: "Node.js", percentage: 58, icon: "" },
@@ -124,11 +124,11 @@ Highlight your passion and what drives you.`,
     },
     {
       id: 6,
-      title: "Weather Dashboard",
-      description: "Real-time weather tracking application with forecasts and location-based alerts.",
-      tags: ["JavaScript", "OpenWeather API", "CSS3"],
-      link: "#",
-      image: "https://images.unsplash.com/photo-1504608524841-42fe6f032b4b?w=500&h=300&fit=crop"
+      title: "Momono.ai",
+      description: "A local AI chatbot application designed specifically for roleplay (RP)",
+      tags: ["React(TS)", "Python/Go", "SQLite"],
+      link: "https://github.com/Caxerion/Momono.ai",
+      image: "#"
     },
     {
       id: 7,
