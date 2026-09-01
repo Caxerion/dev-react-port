@@ -331,9 +331,6 @@ body {
     justify-content: center;
   }
 
-  /* Fix: center the social icon row on mobile to match the
-     rest of the centered hero content. text-align does not
-     affect a flex container's items, so this needs its own rule. */
   .socials {
     justify-content: center;
   }
@@ -409,7 +406,6 @@ body {
   display: flex;
   gap: 1rem;
 }
-
 
 .socials .icon {
   width: 50px;
@@ -507,8 +503,6 @@ body {
   margin-bottom: 1rem;
   color: var(--text-primary);
 }
-
-
 
 .section-subtitle {
   text-align: left;
@@ -637,45 +631,76 @@ body {
   letter-spacing: 1px;
 }
 
-/* Skills Section */
+/* ============================================
+   Skills Section — "code editor" redesign.
+   Chart (recharts) dan logic .skill-progress-bar
+   (width) tidak diubah, hanya tampilan sekitarnya.
+   ============================================ */
 #skills {
   background: var(--bg-primary);
 }
 
-/* Collapse Styles */
-.collapse {
+/* Jendela editor (pengganti .collapse) */
+.code-window {
   background: var(--bg-primary);
   border-radius: 16px;
   overflow: hidden;
   border: 1px solid rgba(99, 102, 241, 0.15);
   margin-top: 2rem;
+  transition: var(--transition);
 }
 
-.collapse-header {
+.code-titlebar {
   display: flex;
   align-items: center;
   gap: 1rem;
-  padding: 1.5rem 2rem;
+  padding: 1.25rem 2rem;
   cursor: pointer;
   background: var(--bg-card);
   transition: var(--transition);
 }
 
-.collapse-header:hover {
+.code-titlebar:hover {
   background: rgba(99, 102, 241, 0.1);
 }
 
-.header-icon {
-  font-size: 1.5rem;
-  color: var(--primary-color);
+.titlebar-dots {
+  display: flex;
+  gap: 6px;
 }
 
-.col-title {
+.dot {
+  width: 11px;
+  height: 11px;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.dot-red {
+  background: #ff5f56;
+}
+
+.dot-yellow {
+  background: #ffbd2e;
+}
+
+.dot-green {
+  background: #27c93f;
+}
+
+.titlebar-path {
   flex: 1;
-  font-size: 1.25rem;
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-size: 1.05rem;
   font-weight: 600;
   color: var(--text-primary);
-  margin: 0;
+}
+
+.titlebar-path i {
+  color: var(--primary-color);
+  font-size: 1.2rem;
 }
 
 .collapse-icon {
@@ -688,48 +713,87 @@ body {
   transform: rotate(180deg);
 }
 
-.collapse-content {
+.code-body {
   padding: 1.5rem 2rem;
   animation: fadeIn 0.3s ease;
 }
 
-/* Category Tabs */
-.skills-category-tabs {
+/* Baris tab file (pengganti .skills-category-tabs / .category-tab) */
+.file-tabs-row {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.75rem;
-  margin-bottom: 1rem;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
 }
 
-.category-tab {
+.file-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+}
+
+.file-tab {
   display: flex;
   align-items: center;
-  gap: 0.5rem;
-  padding: 0.75rem 1.25rem;
+  gap: 0.55rem;
+  padding: 0.65rem 1.1rem;
   background: var(--bg-secondary);
   border: 1px solid var(--border-subtle);
   border-radius: 8px;
   color: var(--text-secondary);
-  font-size: 0.9rem;
+  font-family: ui-monospace, 'SFMono-Regular', Menlo, Consolas, monospace;
+  font-size: 0.82rem;
   font-weight: 500;
   cursor: pointer;
   transition: var(--transition);
 }
 
-.category-tab:hover {
-  background: rgba(99, 102, 241, 0.1);
-  border-color: var(--primary-color);
+.file-tab:hover {
   color: var(--text-primary);
+  border-color: var(--tab-dot, var(--primary-color));
+  background: rgba(99, 102, 241, 0.08);
 }
 
-.category-tab.active {
-  background: var(--primary-color);
-  border-color: var(--primary-color);
+.file-tab.active {
+  background: var(--bg-card);
+  color: var(--text-primary);
+  border-color: var(--tab-dot, var(--primary-color));
+  box-shadow: 0 0 0 1px var(--tab-dot, var(--primary-color)) inset;
+}
+
+.tab-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--tab-dot, var(--primary-color));
+  display: inline-block;
+  flex-shrink: 0;
+}
+
+/* Tombol switch view (pengganti .view-mode-btn) */
+.view-toggle-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.65rem 1.1rem;
+  background: var(--bg-secondary);
+  border: 1px dashed var(--border-subtle);
+  border-radius: 8px;
+  color: var(--text-secondary);
+  font-family: ui-monospace, 'SFMono-Regular', Menlo, Consolas, monospace;
+  font-size: 0.8rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.view-toggle-btn:hover {
   color: white;
-}
-
-.category-tab i {
-  font-size: 1rem;
+  background: var(--gradient-primary);
+  border-color: transparent;
+  border-style: solid;
 }
 
 /* Skills Container */
@@ -746,38 +810,57 @@ body {
   animation: fadeIn 0.3s ease;
 }
 
-.skills-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-  gap: 1rem;
-}
-
-/* Skill Item with Progress */
-.skill-item {
+/* List view — baris kode dengan nomor baris (pengganti .skills-grid / .skill-item) */
+.skills-lines {
+  display: flex;
+  flex-direction: column;
+  border-left: 2px solid var(--border-subtle);
   background: var(--bg-secondary);
-  padding: 1rem 1.25rem;
   border-radius: 10px;
+  overflow: hidden;
+}
+
+.skill-line {
+  display: grid;
+  grid-template-columns: 32px minmax(130px, 200px) 1fr 60px;
+  align-items: center;
+  gap: 1.25rem;
+  padding: 0.85rem 1.25rem;
+  border-bottom: 1px solid var(--border-subtle);
   transition: var(--transition);
-  border: 1px solid transparent;
 }
 
-.skill-item:hover {
-  border-color: var(--primary-color);
-  transform: translateX(5px);
+.skill-line:last-child {
+  border-bottom: none;
 }
 
-.skill-item .skill-name {
+.skill-line:hover {
+  background: rgba(99, 102, 241, 0.08);
+  transform: translateX(4px);
+}
+
+.line-number {
+  font-family: ui-monospace, 'SFMono-Regular', Menlo, Consolas, monospace;
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  text-align: right;
+}
+
+.skill-line .skill-name {
   display: flex;
   align-items: center;
   gap: 0.5rem;
   font-size: 1rem;
   font-weight: 600;
   color: var(--text-primary);
-  margin-bottom: 0.75rem;
+  margin-bottom: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
-.skill-item .skill-name i {
-  font-size: 1.1rem;
+.skill-line .skill-name i {
+  font-size: 1.05rem;
   color: var(--accent-color);
 }
 
@@ -793,7 +876,7 @@ body {
   height: 100%;
   background: var(--gradient-primary);
   border-radius: 4px;
-  transition: width 0.5s ease;
+  transition: width 0.8s ease;
 }
 
 .skill-percentage-tooltip {
@@ -803,61 +886,35 @@ body {
   font-size: 0.75rem;
   font-weight: 600;
   color: var(--accent-color);
+  opacity: 0;
+  transition: opacity 0.2s ease;
 }
 
-/* Skills Header Row with Button */
-.skills-header-row {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: center;
-  gap: 1rem;
-  margin-bottom: 1rem;
+.skill-progress-container:hover .skill-percentage-tooltip {
+  opacity: 1;
 }
 
-/* View Mode Switch Button */
-.view-mode-btn {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  padding: 0.75rem 1.25rem;
-  background: var(--bg-secondary);
-  border: 1px solid var(--border-subtle);
-  border-radius: 8px;
-  color: var(--text-secondary);
-  font-size: 0.9rem;
-  font-weight: 500;
-  cursor: pointer;
-  transition: var(--transition);
+.line-comment {
+  font-family: ui-monospace, 'SFMono-Regular', Menlo, Consolas, monospace;
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  text-align: right;
 }
 
-.view-mode-btn:hover {
-  background: rgba(99, 102, 241, 0.1);
-  border-color: var(--primary-color);
-  color: var(--text-primary);
-}
-
-.view-mode-btn.active {
-  background: var(--gradient-primary);
-  border-color: var(--primary-color);
-  color: white;
-}
-
-.view-mode-btn i {
-  font-size: 1rem;
-}
-
-/* Skills Chart Container */
+/* Chart view container tetap; recharts tidak diubah */
 .skills-chart-container {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 2rem;
-  padding: 1rem 0;
+  gap: 1.5rem;
+  padding: 1.25rem;
+  background: var(--bg-secondary);
+  border-radius: 12px;
+  border: 1px solid var(--border-subtle);
 }
 
 .skills-chart-container .recharts-wrapper {
-  background: var(--bg-secondary);
+  background: var(--bg-card);
   border-radius: 12px;
   padding: 1rem;
 }
@@ -870,7 +927,6 @@ body {
   color: var(--text-primary) !important;
 }
 
-/* Chart Legend Grid */
 .chart-legend-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
@@ -883,7 +939,7 @@ body {
   display: flex;
   align-items: center;
   gap: 0.5rem;
-  background: var(--bg-secondary);
+  background: var(--bg-card);
   padding: 0.5rem 0.75rem;
   border-radius: 6px;
   transition: var(--transition);
@@ -914,21 +970,49 @@ body {
   font-size: 0.8rem;
   color: var(--accent-color);
   font-weight: 600;
+  font-family: ui-monospace, 'SFMono-Regular', Menlo, Consolas, monospace;
 }
 
-/* Responsive adjustments for chart */
+/* Responsive adjustments for skills section */
 @media (max-width: 768px) {
-  .skills-header-row {
+  .file-tabs-row {
     flex-direction: column;
     align-items: stretch;
   }
 
-  .view-mode-btn {
+  .view-toggle-btn {
     justify-content: center;
   }
 
   .chart-legend-grid {
     grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .skill-line {
+    grid-template-columns: 24px 100px 1fr 44px;
+    gap: 0.75rem;
+    padding: 0.75rem 1rem;
+  }
+
+  .line-comment {
+    display: none;
+  }
+
+  .file-tabs {
+    gap: 0.4rem;
+  }
+
+  .file-tab {
+    font-size: 0.75rem;
+    padding: 0.5rem 0.8rem;
+  }
+
+  .code-titlebar,
+  .code-body {
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
   }
 }
 
@@ -1000,15 +1084,6 @@ body {
   width: 350px;
   animation: cardGlow 3s ease-in-out infinite;
 }
-
-/* @keyframes cardGlow {
-  0%, 100% {
-  box-shadow: 0 0 25px rgba(0, 0, 0, 0.6), 0 0 0 1px rgba(99, 102, 241, 0.4), inset 0 0 15px rgba(99, 102, 241, 0.05);
-  }
-  50% {
-    box-shadow: 0 0 40px rgba(99, 102, 241, 0.6), 0 0 0 3px var(--primary-color), inset 0 0 25px rgba(99, 102, 241, 0.15);
-  }
-} */
 
 .project-card:hover {
   transform: translateY(-8px);
@@ -1114,7 +1189,6 @@ body {
 
 /* Contact Form */
 .contact-form {
-  /* background: var(--bg-secondary); */
   padding: 1.5rem;
   border-radius: 16px;
   border: none;
@@ -1331,8 +1405,6 @@ body {
     margin-top: 0;
   }
 
-  /* Fix: center the footer/contact social icon row on mobile too,
-     for the same reason as .socials above. */
   .social-links {
     justify-content: center;
   }
@@ -1619,10 +1691,8 @@ body {
 }
 
 /* Music Player Button (Bottom Right) */
-/* Music Player Button (Bottom Right) */
 .music-player-btn {
   position: static;
-  /* diubah dari fixed, posisinya sekarang diatur wrapper */
   z-index: 999;
   display: flex;
   align-items: center;

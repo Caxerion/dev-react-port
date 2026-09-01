@@ -75,7 +75,8 @@ Highlight your passion and what drives you.`,
       { name: "MS Word", percentage: 75, icon: "" },
       { name: "MS Excel", percentage: 62, icon: "" },
       { name: "Mentoring", percentage: 45, icon: "" },
-      { name: "Public Speaking", percentage: 60, icon: "" }
+      { name: "Public Speaking", percentage: 60, icon: "" },
+      { name: "Terminology Research", percentage: 62, icon: "" }
     ]
   },
   
@@ -118,7 +119,7 @@ Highlight your passion and what drives you.`,
       title: "Supervisor Housekeeping",
       description: "Grand Hotel Nusantara supervisor housekeeping app, rooms tracking & monitoring.",
       tags: ["React.js/Tailwind", "Express.js", "MySQL"],
-      link: "https://tasky-task-b22b1.web.app",
+      link: "https://github.com/Caxerion2/Sistem-Housekeeping-Hotel",
       image: sistemhotelImg
     },
     {
