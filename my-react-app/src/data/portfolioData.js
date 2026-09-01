@@ -28,14 +28,14 @@ Highlight your passion and what drives you.`,
       { name: "HTML5/CSS3", percentage: 82, icon: "" },
       { name: "JavaScript (ES6+)", percentage: 68, icon: "" },
       { name: "React/Next", percentage: 70, icon: "" },
-      { name: "Svelte", percentage: 20, icon: "" },
+      { name: "Svelte/Sveltekit", percentage: 20, icon: "" },
       { name: "Bootstrap", percentage: 75, icon: "" },
       { name: "Tailwind", percentage: 62, icon: "" }
     ],
     backend: [
-      { name: "Node JS", percentage: 58, icon: "" },
+      { name: "Node.js", percentage: 58, icon: "" },
       { name: "PHP", percentage: 65, icon: "" },
-      { name: "Express JS", percentage: 60, icon: ""},
+      { name: "Express.js", percentage: 60, icon: ""},
       { name: "Python", percentage: 50, icon: "" },
       { name: "Laravel", percentage: 62, icon: "" },
       { name: "REST APIs", percentage: 58, icon: "" }
@@ -45,7 +45,7 @@ Highlight your passion and what drives you.`,
       { name: "Firebase", percentage: 58, icon: "" },
       { name: "MongoDB", percentage: 42, icon: "" },
       { name: "Prisma ORM", percentage: 40, icon: "" },
-      { name: "SQLite", percentage: 55, icon: "" }
+      { name: "SQLite", percentage: 60, icon: "" }
     ],
     gamedev: [
       { name: "Roblox Studio", percentage: 62, icon: "" },
