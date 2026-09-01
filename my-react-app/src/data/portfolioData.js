@@ -26,24 +26,24 @@ Highlight your passion and what drives you.`,
   skills: {
     frontend: [
       { name: "HTML5/CSS3", percentage: 82, icon: "" },
-      { name: "JavaScript (ES6+)", percentage: 70, icon: "" },
+      { name: "JavaScript (ES6+)", percentage: 72, icon: "" },
       { name: "React/Next", percentage: 70, icon: "" },
-      { name: "Svelte/Sveltekit", percentage: 20, icon: "" },
+      { name: "Svelte/Sveltekit", percentage: 30, icon: "" },
       { name: "Bootstrap", percentage: 75, icon: "" },
-      { name: "Tailwind", percentage: 65, icon: "" }
+      { name: "Tailwind", percentage: 68, icon: "" }
     ],
     backend: [
-      { name: "Node.js", percentage: 58, icon: "" },
+      { name: "Node.js", percentage: 62, icon: "" },
       { name: "PHP", percentage: 65, icon: "" },
       { name: "Express.js", percentage: 60, icon: ""},
-      { name: "Python", percentage: 50, icon: "" },
+      { name: "Python", percentage: 55, icon: "" },
       { name: "Laravel", percentage: 62, icon: "" },
       { name: "REST APIs", percentage: 58, icon: "" }
     ],
     database: [  
       { name: "MySQL", percentage: 72, icon: "" },
       { name: "Firebase", percentage: 58, icon: "" },
-      { name: "MongoDB", percentage: 42, icon: "" },
+      { name: "MongoDB", percentage: 50, icon: "" },
       { name: "Prisma ORM", percentage: 40, icon: "" },
       { name: "SQLite", percentage: 60, icon: "" }
     ],
@@ -66,7 +66,7 @@ Highlight your passion and what drives you.`,
       { name: "VS Code", percentage: 75, icon: "" },
       { name: "Postman", percentage: 60, icon: "" },
       { name: "Terminal", percentage: 52, icon: "" },
-      { name: "WordPress", percentage: 60, icon: "" },
+      { name: "ThunderClient", percentage: 72, icon: "" },
       { name: "Replit", percentage: 68, icon: "" },
       { name: "cPanel", percentage: 48, icon: "" },
       { name: "MySQL Workbench", percentage: 62, icon: "" }
