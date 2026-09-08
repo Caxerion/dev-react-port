@@ -1,12 +1,9 @@
 import { useState, useRef } from 'react'
-import musicFile from '../assets/music/a lonely star_spotdown.org.mp3'
-import musicFile2 from '../assets/music/Together_spotdown.org.mp3'
-import musicFile3 from '../assets/music/I Thought We Were Friends_spotdown.org.mp3'
 
 const musicTracks = [
-  { title: 'A Lonely Star - Jhove', src: musicFile },
-  { title: 'Together', src: musicFile2 },
-  { title: 'I Thought We Were Friends', src: musicFile3 },
+  { title: 'A Lonely Star - Jhove', src: '/music/a lonely star_spotdown.org.mp3' },
+  { title: 'Together', src: '/music/Together_spotdown.org.mp3' },
+  { title: 'I Thought We Were Friends', src: '/music/I Thought We Were Friends_spotdown.org.mp3' },
 ]
 
 function useMusicPlayer() {

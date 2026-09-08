@@ -1,20 +1,25 @@
-import { useState, useEffect } from 'react'
+import { useState, useEffect, lazy, Suspense } from 'react'
 import Typed from 'typed.js'
 import { portfolioData } from './data/portfolioData'
 import useMusicPlayer from './hooks/useMusicPlayer'
 import useTheme from './hooks/useTheme'
 import Navbar from './components/Navbar'
 import Hero from './sections/Hero'
-import About from './sections/About'
-import Skills from './sections/Skills'
-import Projects from './sections/Projects'
-import Services from './components/Services'
-import Contact from './sections/Contact'
-import Footer from './components/Footer'
 import SpotifyModal from './components/SpotifyModal'
 import MusicPlayerModal from './components/MusicPlayerModal'
 import ThemeToggle from './components/ThemeToggle'
 import './App.css'
+
+const About = lazy(() => import('./sections/About'))
+const Skills = lazy(() => import('./sections/Skills'))
+const Projects = lazy(() => import('./sections/Projects'))
+const Services = lazy(() => import('./sections/Services'))
+const Contact = lazy(() => import('./sections/Contact'))
+const Footer = lazy(() => import('./components/Footer'))
+
+function SectionFallback() {
+  return <div style={{ minHeight: '50vh' }} />
+}
 
 function App() {
   useEffect(() => {
@@ -72,25 +77,27 @@ function App() {
         scrollToSection={scrollToSection}
       />
 
-      <About />
+      <Suspense fallback={<SectionFallback />}>
+        <About />
 
-      <Skills
-        skills={skills}
-        showSkills={showSkills}
-        setShowSkills={setShowSkills}
-        activeCategory={activeCategory}
-        setActiveCategory={setActiveCategory}
-        viewMode={viewMode}
-        setViewMode={setViewMode}
-      />
+        <Skills
+          skills={skills}
+          showSkills={showSkills}
+          setShowSkills={setShowSkills}
+          activeCategory={activeCategory}
+          setActiveCategory={setActiveCategory}
+          viewMode={viewMode}
+          setViewMode={setViewMode}
+        />
 
-      <Services />
+        <Projects projects={projects} />
 
-      <Projects projects={projects} />
+        <Services />
 
-      <Contact email={email} />
+        <Contact email={email} />
 
-      <Footer name={name} email={email} linkedin={linkedin} github={github} />
+        <Footer name={name} email={email} linkedin={linkedin} github={github} />
+      </Suspense>
 
       <SpotifyModal show={showSpotifyModal} setShow={setShowSpotifyModal} />
 
