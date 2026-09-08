@@ -10,6 +10,7 @@ function Navbar({ isScrolled, scrollToSection }) {
             <li><a href="#about" onClick={() => scrollToSection('about')}>About</a></li>
             <li><a href="#skills" onClick={() => scrollToSection('skills')}>Skills</a></li>
             <li><a href="#projects" onClick={() => scrollToSection('projects')}>Projects</a></li>
+            <li><a href="#services" onClick={() => scrollToSection('services')}>Services</a></li>
             <li><a href="#contact" onClick={() => scrollToSection('contact')}>Contact</a></li>
           </ul>
         </div>

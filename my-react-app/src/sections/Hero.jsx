@@ -1,4 +1,4 @@
-import heroImg from '../assets/lol.png'
+import heroImg from '../assets/image.png'
 
 function Hero({ firstName, lastName, aboutFirstLine, scrollToSection }) {
   return (
