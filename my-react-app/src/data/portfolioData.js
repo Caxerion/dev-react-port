@@ -27,7 +27,7 @@ Highlight your passion and what drives you.`,
     frontend: [
       { name: "HTML5/CSS3", percentage: 82, icon: "" },
       { name: "JavaScript (ES6+)", percentage: 72, icon: "" },
-      { name: "React/Next", percentage: 70, icon: "" },
+      { name: "React.js/Next.js", percentage: 70, icon: "" },
       { name: "Svelte/Sveltekit", percentage: 30, icon: "" },
       { name: "Bootstrap", percentage: 75, icon: "" },
       { name: "Tailwind", percentage: 68, icon: "" }
