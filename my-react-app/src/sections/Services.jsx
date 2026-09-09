@@ -1,15 +1,15 @@
 const services = [
   {
     icon: 'fas fa-code',
-    title: 'Frontend Development',
-    description: 'Crafting responsive, pixel-perfect interfaces with React, Svelte, and modern CSS frameworks that users love.',
+    title: 'Landing Page Development',
+    description: 'Build responsive, high-converting landing pages and company profile websites with React and modern CSS.',
     included: [
       'Responsive layouts for all devices',
       'Component library setup',
       'Performance optimization',
       'Cross-browser testing',
     ],
-    tech: ['React', 'Svelte', 'Tailwind', 'Bootstrap'],
+    tech: ['HTML/CSS', 'JavaScript', 'React', 'Tailwind', 'Bootstrap'],
     color: '#6366f1',
   },
   {
@@ -35,7 +35,7 @@ const services = [
       'Data migration',
       'Backup strategy',
     ],
-    tech: ['MySQL', 'MongoDB', 'Firebase', 'SQLite'],
+    tech: ['MySQL', 'MongoDB', 'Firebase', 'MySQL Workbench'],
     color: '#10b981',
   },
   {

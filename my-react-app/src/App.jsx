@@ -41,6 +41,25 @@ function App() {
   const [showSpotifyModal, setShowSpotifyModal] = useState(false)
   const [showMusicPlayerModal, setShowMusicPlayerModal] = useState(false)
 
+  useEffect(() => {
+    const modalOpen = showSpotifyModal || showMusicPlayerModal
+    if (modalOpen) {
+      const scrollbarWidth = window.innerWidth - document.documentElement.clientWidth
+      document.body.style.overflow = 'hidden'
+      document.documentElement.style.overflow = 'hidden'
+      document.body.style.paddingRight = scrollbarWidth > 0 ? `${scrollbarWidth}px` : ''
+    } else {
+      document.body.style.overflow = ''
+      document.documentElement.style.overflow = ''
+      document.body.style.paddingRight = ''
+    }
+    return () => {
+      document.body.style.overflow = ''
+      document.documentElement.style.overflow = ''
+      document.body.style.paddingRight = ''
+    }
+  }, [showSpotifyModal, showMusicPlayerModal])
+
   const musicPlayer = useMusicPlayer()
   const { theme, toggleTheme } = useTheme()
 

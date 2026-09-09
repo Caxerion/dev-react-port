@@ -1,4 +1,17 @@
+import { useState } from 'react'
+
 function SpotifyModal({ show, setShow }) {
+  const [closing, setClosing] = useState(false)
+
+  const closeModal = () => {
+    if (closing) return
+    setClosing(true)
+    setTimeout(() => {
+      setShow(false)
+      setClosing(false)
+    }, 300)
+  }
+
   return (
     <>
       <button
@@ -11,11 +24,11 @@ function SpotifyModal({ show, setShow }) {
       </button>
 
       {show && (
-        <div className="modal-overlay" onClick={() => setShow(false)}>
+        <div className={`modal-overlay ${closing ? 'closing' : ''}`} onClick={closeModal}>
           <div className="spotify-modal" onClick={(e) => e.stopPropagation()}>
             <button
               className="modal-close"
-              onClick={() => setShow(false)}
+              onClick={closeModal}
               aria-label="Close Modal"
             >
               <i className="fas fa-times"></i>

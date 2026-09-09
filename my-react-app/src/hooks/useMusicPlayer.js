@@ -4,6 +4,7 @@ const musicTracks = [
   { title: 'A Lonely Star - Jhove', src: '/music/a lonely star_spotdown.org.mp3' },
   { title: 'Together', src: '/music/Together_spotdown.org.mp3' },
   { title: 'I Thought We Were Friends', src: '/music/I Thought We Were Friends_spotdown.org.mp3' },
+  {title:  'Walk Out', src: '/music/Walk Out.mp3'}
 ]
 
 function useMusicPlayer() {

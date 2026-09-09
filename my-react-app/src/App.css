@@ -1775,7 +1775,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  z-index: 1000;
+  z-index: 1100;
   animation: fadeIn 0.3s ease;
 }
 
@@ -1840,6 +1840,38 @@ body {
   }
 }
 
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  to {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+}
+
+/* Close animation */
+.modal-overlay.closing {
+  animation: fadeOut 0.3s ease forwards;
+}
+
+.modal-overlay.closing .spotify-modal,
+.modal-overlay.closing .music-player-modal {
+  animation: slideDown 0.3s ease forwards;
+}
+
 /* Music Player Button (Bottom Right) */
 .music-player-btn {
   position: static;
@@ -1882,7 +1914,7 @@ body {
   position: fixed;
   bottom: 30px;
   right: 30px;
-  z-index: 999;
+  z-index: 1100;
   display: flex;
   flex-direction: column-reverse;
   align-items: flex-end;
@@ -2034,4 +2066,42 @@ body {
 
 .track-item.active {
   background: #1db954;
+}
+
+.pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 5px;
+  margin-bottom: 10px;
+}
+
+.pagination-btn {
+  background: #282828;
+  border: none;
+  color: white;
+  width: 34px;
+  height: 34px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.pagination-btn:hover:not(:disabled) {
+  background: #3e3e3e;
+}
+
+.pagination-btn:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.pagination-info {
+  color: #b3b3b3;
+  font-size: 14px;
+  font-weight: 600;
 }
