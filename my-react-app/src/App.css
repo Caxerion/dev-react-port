@@ -1560,6 +1560,9 @@ body {
   font-size: 0.88rem;
   font-weight: 600;
   text-decoration: none;
+  font-family: inherit;
+  background: transparent;
+  cursor: pointer;
   transition: background 0.3s ease, color 0.3s ease, transform 0.2s ease;
 }
 
@@ -1588,6 +1591,250 @@ body {
     grid-template-columns: 1fr;
   }
 }
+
+/* Service Modal */
+.service-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.55);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+  z-index: 1200;
+  animation: fadeIn 0.25s ease;
+}
+
+.service-modal-overlay.closing {
+  animation: fadeOut 0.25s ease forwards;
+}
+
+.service-modal {
+  position: relative;
+  width: 100%;
+  max-width: 780px;
+  max-height: 90vh;
+  overflow-y: auto;
+  background: var(--bg-card);
+  border: 1px solid color-mix(in srgb, var(--accent) 30%, var(--border-subtle));
+  border-radius: 20px;
+  padding: 2.2rem;
+  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.5);
+  animation: popIn 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.service-modal::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  border-radius: 20px 20px 0 0;
+  background: linear-gradient(90deg, var(--accent), color-mix(in srgb, var(--accent) 55%, #fff));
+}
+
+.service-modal-overlay.closing .service-modal {
+  animation: popOut 0.25s ease forwards;
+}
+
+.service-modal-header {
+  display: flex;
+  gap: 1.25rem;
+  align-items: flex-start;
+  margin-bottom: 1.6rem;
+  padding-right: 2.5rem;
+}
+
+.service-modal-header .service-icon {
+  flex-shrink: 0;
+  width: 60px;
+  height: 60px;
+  font-size: 1.4rem;
+  margin-bottom: 0;
+  border-radius: 16px;
+  background: color-mix(in srgb, var(--accent) 18%, transparent);
+  border: 1px solid color-mix(in srgb, var(--accent) 28%, transparent);
+  box-shadow: 0 0 0 4px color-mix(in srgb, var(--accent) 8%, transparent), 0 10px 24px color-mix(in srgb, var(--accent) 22%, transparent);
+}
+
+.service-modal-heading {
+  min-width: 0;
+}
+
+.service-modal-eyebrow {
+  display: block;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 0.35rem;
+}
+
+.service-modal-header .service-description {
+  margin-bottom: 0;
+}
+
+.service-modal-header .service-title {
+  font-size: 1.45rem;
+}
+
+.service-modal-section {
+  margin-bottom: 1.5rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--border-subtle);
+}
+
+.service-section-label {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  margin-bottom: 1rem;
+}
+
+.service-section-label i {
+  color: var(--accent);
+  font-size: 0.9rem;
+}
+
+.service-modal-included-list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.6rem 1.5rem;
+  list-style: none;
+}
+
+.service-modal-included-list li {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-size: 0.86rem;
+  color: var(--text-secondary);
+}
+
+.service-modal-included-list li i {
+  flex-shrink: 0;
+  width: 22px;
+  height: 22px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.6rem;
+  color: #fff;
+  border-radius: 50%;
+  background: color-mix(in srgb, var(--accent) 85%, #000 15%);
+}
+
+.service-modal-tech {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.service-modal-tech .service-tech-tag {
+  padding: 0.4rem 0.8rem;
+  font-size: 0.76rem;
+  font-weight: 600;
+  color: color-mix(in srgb, var(--accent) 85%, var(--text-secondary));
+  background: color-mix(in srgb, var(--accent) 10%, transparent);
+  border: 1px solid color-mix(in srgb, var(--accent) 28%, transparent);
+  border-radius: 20px;
+}
+
+.service-modal-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--border-subtle);
+}
+
+.service-modal-form .form-group {
+  margin-bottom: 0;
+}
+
+.service-modal-form .form-group label {
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.service-modal-form .form-group input,
+.service-modal-form .form-group textarea {
+  background: color-mix(in srgb, var(--accent) 5%, var(--bg-primary));
+  border-color: color-mix(in srgb, var(--accent) 14%, var(--border-subtle));
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-modal-form .form-group input:focus,
+.service-modal-form .form-group textarea:focus {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px color-mix(in srgb, var(--accent) 18%, transparent);
+}
+
+.service-submit-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  background: linear-gradient(135deg, var(--accent), color-mix(in srgb, var(--accent) 60%, #000));
+  box-shadow: 0 10px 24px color-mix(in srgb, var(--accent) 30%, transparent);
+}
+
+.service-submit-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 14px 30px color-mix(in srgb, var(--accent) 42%, transparent);
+}
+
+@media (max-width: 576px) {
+  .service-modal {
+    padding: 1.4rem;
+  }
+
+  .service-modal-header {
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  .service-modal-included-list {
+    grid-template-columns: 1fr;
+  }
+}
+
+@keyframes popIn {
+  from {
+    opacity: 0;
+    transform: scale(0.7) translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+@keyframes popOut {
+  from {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+
+  to {
+    opacity: 0;
+    transform: scale(0.85) translateY(15px);
+  }
+}
+
 /* Footer */
 .footer {
   background: var(--bg-secondary);

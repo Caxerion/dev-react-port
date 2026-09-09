@@ -1,3 +1,6 @@
+import { useState } from 'react'
+import ServicesModal from '../components/ServicesModal'
+
 const services = [
   {
     icon: 'fas fa-code',
@@ -80,6 +83,23 @@ const services = [
 ]
 
 function Services() {
+  const [selectedService, setSelectedService] = useState(null)
+  const [closing, setClosing] = useState(false)
+
+  const openModal = (service) => {
+    setClosing(false)
+    setSelectedService(service)
+  }
+
+  const closeModal = () => {
+    if (closing) return
+    setClosing(true)
+    setTimeout(() => {
+      setSelectedService(null)
+      setClosing(false)
+    }, 250)
+  }
+
   return (
     <section id="services" className="section services-section">
       <div className="container">
@@ -118,14 +138,20 @@ function Services() {
                 ))}
               </div>
 
-              <a href="#contact" className="service-cta">
+              <button className="service-cta" onClick={() => openModal(service)}>
                 Let's discuss
                 <i className="fas fa-arrow-right" aria-hidden="true"></i>
-              </a>
+              </button>
             </div>
           ))}
         </div>
       </div>
+
+      <ServicesModal
+        service={selectedService}
+        closing={closing}
+        onClose={closeModal}
+      />
     </section>
   )
 }
