@@ -3,7 +3,7 @@ function Contact({ email }) {
     <section id="contact" className="section">
       <div className="container-contact">
         <h2 className="section-title">Get In Touch</h2>
-        <p className="section-subtitle">Keep in touch with me, contact me if it's neccessary!</p>
+        <p className="section-subtitle">Wanna contribute with me? contact me if it's neccessary!</p>
 
         <div className="contact-wrapper">
           <div className="contact-container">

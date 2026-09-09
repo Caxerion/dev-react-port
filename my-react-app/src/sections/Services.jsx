@@ -104,7 +104,7 @@ function Services() {
     <section id="services" className="section services-section">
       <div className="container">
         <h2 className="section-title">Services I Offer</h2>
-        <p className="section-subtitle">Services tailored to bring your ideas to life</p>
+        <p className="section-subtitle">Let's take what is in your head and make it actual reality</p>
 
         <div className="services-grid">
           {services.map((service, index) => (
@@ -130,12 +130,6 @@ function Services() {
                     </li>
                   ))}
                 </ul>
-              </div>
-
-              <div className="service-tech">
-                {service.tech.map((t, i) => (
-                  <span key={i} className="service-tech-tag">{t}</span>
-                ))}
               </div>
 
               <button className="service-cta" onClick={() => openModal(service)}>
