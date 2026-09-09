@@ -4,8 +4,7 @@ function getInitialTheme() {
   const stored = localStorage.getItem('theme')
   if (stored === 'light' || stored === 'dark') return stored
 
-  const prefersLight = window.matchMedia('(prefers-color-scheme: light)').matches
-  return prefersLight ? 'light' : 'dark'
+  return 'light'
 }
 
 function useTheme() {
