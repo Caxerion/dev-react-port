@@ -33,7 +33,7 @@ Highlight your passion and what drives you.`,
       { name: "Tailwind", percentage: 68, icon: "" }
     ],
     backend: [
-      { name: "Node.js", percentage: 62, icon: "" },
+      { name: "Node.js", percentage: 68, icon: "" },
       { name: "PHP", percentage: 65, icon: "" },
       { name: "Express.js", percentage: 60, icon: ""},
       { name: "Python", percentage: 55, icon: "" },
@@ -62,13 +62,11 @@ Highlight your passion and what drives you.`,
       { name: "Sketching", percentage: 60, icon: "" }
     ],
     tools: [
-      { name: "GitHub", percentage: 75, icon: "" },
-      { name: "VS Code", percentage: 75, icon: "" },
+      { name: "GitHub", percentage: 78, icon: "" },
       { name: "Postman", percentage: 60, icon: "" },
       { name: "Terminal", percentage: 52, icon: "" },
       { name: "ThunderClient", percentage: 72, icon: "" },
       { name: "Replit", percentage: 68, icon: "" },
-      { name: "cPanel", percentage: 48, icon: "" },
       { name: "MySQL Workbench", percentage: 62, icon: "" }
     ],
     other: [

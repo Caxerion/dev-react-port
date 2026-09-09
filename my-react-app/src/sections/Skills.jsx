@@ -15,11 +15,11 @@ const COLORS = [
 const CATEGORY_META = {
   frontend: { file: 'frontend.jsx', dot: '#6366f1' },
   backend: { file: 'backend.js', dot: '#f59e0b' },
-  database: { file: 'database.sql', dot: '#c537f9' },
+  database: { file: 'database.sql', dot: '#ef37f9' },
   gamedev: { file: 'gamedev.lua', dot: '#1740d4' },
   design: { file: 'design.fig', dot: '#eb2411' },
   tools: { file: 'tools.sh', dot: '#10b981' },
-  other: { file: 'pro-skills.md', dot: '#14b8a6' },
+  other: { file: 'pro-skills.md', dot: '#1de1ca' },
 }
 
 function Skills({
