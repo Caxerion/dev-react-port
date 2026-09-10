@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import ServicesModal from '../components/ServicesModal'
+import ServiceIcon from '../components/ServiceIcon'
 
 const services = [
   {
@@ -7,26 +8,28 @@ const services = [
     title: 'Landing Page Development',
     description: 'Build responsive, high-converting landing pages and company profile websites with React and modern CSS.',
     included: [
+      'Company profile & personal portfolio sites',
       'Responsive layouts for all devices',
       'Component library setup',
       'Performance optimization',
       'Cross-browser testing',
     ],
-    tech: ['HTML/CSS', 'JavaScript', 'React', 'Tailwind', 'Bootstrap'],
+    tech: ['HTML/CSS', 'JavaScript', 'React.js', 'Tailwind', 'Bootstrap'],
     color: '#6366f1',
   },
   {
-    icon: 'fas fa-server',
-    title: 'Backend Development',
-    description: 'Building scalable server-side solutions and RESTful APIs with Node.js, PHP, Laravel, and Python.',
+    icon: 'fas fa-building',
+    title: 'Full-stack Enterprises Solutions',
+    description: 'Build enterprise-grade applications with scalable backends, secure authentication, and seamless system integrations.',
     included: [
-      'RESTful API design',
+      'Full-stack development (Frontend + Backend)',
+      'RESTful & microservices API design',
       'Authentication & authorization',
       'Database integration',
-      'Server deployment',
+      'Third-party system integration'
     ],
-    tech: ['Node.js', 'PHP', 'Laravel', 'Python'],
-    color: '#f59e0b',
+    tech: ['React.js', 'Node.js', 'Laravel/PHP', 'MySQL', 'JWT/OAuth'],
+    color: '#3b82f6',
   },
   {
     icon: 'fas fa-database',
@@ -51,25 +54,25 @@ const services = [
       'Design system',
       'Usability testing',
     ],
-    tech: ['Figma', 'Canva', 'Photoshop'],
+    tech: ['Figma', 'Canva', 'Sketching'],
     color: '#ec4899',
   },
   {
     icon: 'fas fa-gamepad',
-    title: 'Game Development',
-    description: 'Creating interactive games and experiences on Roblox Studio with Lua scripting and C++.',
+    title: 'Roblox Game Bugs Hunter',
+    description: 'Developing Roblox game.',
     included: [
       'Gameplay mechanics',
       'Level design',
       'Script implementation',
       'Publishing setup',
     ],
-    tech: ['Roblox Studio', 'Lua', 'C++'],
+    tech: ['Roblox Studio', 'Lua', 'Thunderclient'],
     color: '#3b82f6',
   },
   {
     icon: 'fas fa-plug',
-    title: 'API Integration',
+    title: 'API Integration & Development',
     description: 'Connecting systems together with well-documented REST APIs, tested and validated with Postman.',
     included: [
       'Endpoint documentation',
@@ -114,7 +117,7 @@ function Services() {
               style={{ '--accent': service.color }}
             >
               <span className="service-icon">
-                <i className={service.icon}></i>
+                <ServiceIcon icon={service.icon} />
               </span>
 
               <h3 className="service-title">{service.title}</h3>

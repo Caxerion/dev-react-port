@@ -1,4 +1,5 @@
 import { useEffect } from 'react'
+import ServiceIcon from './ServiceIcon'
 
 function ServicesModal({ service, closing, onClose }) {
   useEffect(() => {
@@ -33,7 +34,7 @@ function ServicesModal({ service, closing, onClose }) {
 
         <div className="service-modal-header">
           <span className="service-icon">
-            <i className={service.icon}></i>
+            <ServiceIcon icon={service.icon} />
           </span>
           <div className="service-modal-heading">
             <span className="service-modal-eyebrow">Let's work together</span>
