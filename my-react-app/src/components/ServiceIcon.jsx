@@ -20,6 +20,11 @@ const iconPaths = {
       <path d="M13 16h1" />
     </>
   ),
+  'fas fa-cloud': (
+    <>
+      <path d="M17.5 19H9a7 7 0 1 1 6.71-9h1.79a4.5 4.5 0 1 1 0 9Z" />
+    </>
+  ),
   'fas fa-database': (
     <>
       <ellipse cx="12" cy="5" rx="9" ry="3" />
@@ -56,6 +61,10 @@ const iconPaths = {
 }
 
 function ServiceIcon({ icon }) {
+  if (!iconPaths[icon]) {
+    return <i className={icon} aria-hidden="true"></i>
+  }
+
   return (
     <svg
       viewBox="0 0 24 24"
@@ -66,7 +75,7 @@ function ServiceIcon({ icon }) {
       strokeLinejoin="round"
       aria-hidden="true"
     >
-      {iconPaths[icon] || null}
+      {iconPaths[icon]}
     </svg>
   )
 }

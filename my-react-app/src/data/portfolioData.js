@@ -11,7 +11,7 @@ export const portfolioData = {
   // Personal Information
   name: "Kenneth Geveny Ayhuwan",
   title: "Your Title/Role",
-  about: `An extremely junior programmer with a passion of typing and looking forward of my own field. 
+  about: `Intense junior programmer with a passion of typing and looking forward of my own field. 
 Tell visitors who you are, what you do, and what makes you unique.
 Highlight your passion and what drives you.`,
   

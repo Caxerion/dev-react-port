@@ -24,7 +24,7 @@ function SectionFallback() {
 function App() {
   useEffect(() => {
     const typed = new Typed('.typed-text', {
-      strings: ['Junior Programmer', 'Full-stack Developer', 'Designer', 'Beginner Game Developer', 'Ai-Engineer', 'Humble person :)'],
+      strings: ['Junior Programmer', 'Full-stack Developer', 'Designer', 'Beginner Game Developer', 'Machine Learning Engineer', 'Humble person :)'],
       typeSpeed: 75,
       backSpeed: 35,
       loop: true,

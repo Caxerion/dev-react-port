@@ -28,20 +28,22 @@ const services = [
       'Database integration',
       'Third-party system integration'
     ],
-    tech: ['React.js', 'Node.js', 'Laravel/PHP', 'MySQL', 'JWT/OAuth'],
+    tech: ['React.js', 'Node.js', 'Laravel/PHP', 'SQL/NoSQL', 'JWT/OAuth'],
     color: '#3b82f6',
   },
   {
-    icon: 'fas fa-database',
-    title: 'Database Design',
-    description: 'Structuring efficient data models and queries with MySQL, MongoDB, Firebase, and SQLite.',
+    icon: 'fa-brands fa-sellsy',
+    title: 'SaaS Development',
+    description: 'Building scalable multi-tenant SaaS platforms with subscription billing, user management, and production-ready infrastructure.',
     included: [
-      'Schema architecture',
-      'Query optimization',
-      'Data migration',
-      'Backup strategy',
+      'Full-stack development',
+      'Subscription & billing integration',
+      'Role-based access control (RBAC)',
+      'Dashboard & analytics side',
+      'RESTful API & third-party integrations',
+      // 'CI/CD & cloud deployment setup',
     ],
-    tech: ['MySQL', 'MongoDB', 'Firebase', 'MySQL Workbench'],
+    tech: ['React.js', 'Node.js', 'SQL/NoSQL', 'Stripe API', 'Docker'],
     color: '#10b981',
   },
   {
@@ -79,8 +81,9 @@ const services = [
       'Request & response testing',
       'Error handling',
       'Rate limit handling',
+      'More Backend Developments'
     ],
-    tech: ['REST APIs', 'Postman', 'ThunderClient'],
+    tech: ['Socket.io', 'REST APIs', 'Postman', 'ThunderClient'],
     color: '#8b5cf6',
   },
 ]
